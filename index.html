@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOONLIGHT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="imgg/bg.jpg" alt="bg" id="bg">
+        <img src="imgg/moon.png" alt="moon" id="moon">
+        <img src="imgg/mountain.png" alt="mountain" id="mountain">
+        <img src="imgg/road.png" alt="road" id="road">
+        <h2 class="text" id="text">Moon Light</h2>
+
+    </section>
+    <section class="content">   
+        <h3>Parallax Background Scrolling</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis deserunt unde quidem debitis modi cumque? Quis nemo consequuntur molestias quo quod explicabo facere labore suscipit dicta, consectetur corrupti? Nisi doloremque distinctio iste nulla minus! Quisquam veritatis quaerat rerum facilis hic vel amet possimus atque ex, consectetur, commodi vitae quam mollitia deleniti ipsa totam tenetur dolor, odit debitis nihil inventore vero? Tempora magni perspiciatis aliquam, vel, consequuntur fugit voluptate nam nostrum obcaecati officiis nulla repellat dolores odit suscipit. Reiciendis hic nulla et perferendis modi consequatur quam adipisci quod earum tempora, necessitatibus commodi magnam ea omnis est deleniti dicta harum molestias qui dolores minus debitis officiis voluptatibus eum. Accusantium possimus libero minus, id nesciunt fugiat animi consectetur molestiae corrupti dolore in natus magnam? Nam eligendi aut tenetur deserunt! At cum beatae repudiandae, culpa soluta reprehenderit, saepe aperiam, sint ipsa aliquam repellendus! Labore minima doloribus maxime voluptas necessitatibus asperiores inventore perspiciatis quis laborum?</p>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        let bg = $('#bg');
+        let moon = $('#moon');
+        let mountain = $('#mountain');
+        let road = $('#road');
+        let text = $('#text');
+
+        $(window).scroll(function(){
+            let value = $(this).scrollTop();
+            console.log(value)
+
+            moon.css({left:-value*0.2+'px',top:value*0.35+'px'})
+            bg.css({top:value*0.2+'px'})
+            mountain.css({top:-value*0.15+'px'})
+            road.css({top:value*0.15+'px'})
+            text.css({top:value+'px'})
+        })
+    </script>
+</body>
+</html>
